@@ -1,20 +1,24 @@
+"use client"
+
 import { Card } from "_components/ui/Card"
 import { WeatherIcon } from "_components/ui/WeatherIcon"
 import { toDateTime } from "_utils/dateUtils"
 import styles from "./styles.module.scss"
+import { useParams } from "next/navigation"
 
 export const Weather = ({
-	city = "London",
+	city: { name, local_names, lat, lon, country },
 	data: {
 		dt = 0,
 		temp = 0,
 		weather: [{ description = "Clear", icon = "04n" }] = [{}],
 	} = {},
 }) => {
+	const params = useParams()
 	return (
 		<Card className={styles.weather}>
 			<div className={styles.weatherdetails}>
-				<div className={styles.city}>{city}</div>
+				<div className={styles.city}>{local_names[params.lang]}, {country}</div>
 				<div className={styles.datetime}>{toDateTime(dt)}</div>
 				<div className={styles.temperature}>{`${parseInt(temp)}°`}</div>
 			</div>

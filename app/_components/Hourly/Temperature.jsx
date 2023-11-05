@@ -50,11 +50,12 @@ export const Temperature = ({ data }) => {
 			onMouseUp={onMouseUp}
 			onMouseMove={onMouseMove}>
 			{data.map((hour, index) => {
+				console.log(hour.weather[0].icon);
 				return (
 					<Card key={index} className={styles.day}>
 						<div className={styles.title}>{toDateTime(hour.dt)}</div>
 						<div className={styles.iconWrapper}>
-							<WeatherIcon className={styles.icon} />
+							<WeatherIcon className={styles.icon} icon={hour.weather[0].icon} />
 						</div>
 						<div className={styles.value}>{`${parseInt(hour.temp)}°`}</div>
 					</Card>
