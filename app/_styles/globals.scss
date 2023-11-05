@@ -1,0 +1,142 @@
+// Variables
+@import "_variables";
+
+// fonts
+@import url(https://fonts.googleapis.com/css2?family=Syne:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: $font_syne;
+}
+
+body {
+  display: flex;
+  width: 100dvw;
+  min-height: 100dvh;
+  color: $foreground;
+  font-size: $font_normal;
+  background-color: $background;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 5rem;
+  letter-spacing: -0.027em;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 3.5rem;
+  letter-spacing: -0.027em;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 2.5rem;
+  letter-spacing: -0.027em;
+}
+
+h4 {
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 1.3125rem;
+  letter-spacing: -0.027em;
+}
+
+h5 {
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
+}
+
+h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: -0.027em;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0em;
+  font-size: 1.125rem;
+}
+
+button {
+  border: none;
+  color: inherit;
+  padding: 1.25rem 2rem;
+  border-radius: 0.75rem;
+  background-color: $accent_100;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+input {
+  width: 100%;
+  border: none;
+  color: inherit;
+  max-width: 100%;
+  font-size: 1rem;
+  background: none;
+  border-radius: 0.75rem;
+
+  &::placeholder {
+    color: currentColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  &:visited {
+    color: currentColor;
+  }
+}
+
+.container {
+  gap: 1rem;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100dvw;
+  align-self: center;
+  margin-inline: auto;
+}

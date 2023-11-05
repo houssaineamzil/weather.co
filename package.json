@@ -1,0 +1,27 @@
+{
+  "name": "weather.co",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prettify": "prettier --write .",
+    "dev": "next dev -p 8000",
+    "clean": "rm -r .next && yarn run prettify",
+    "build": "next build",
+    "start": "next start -p 8000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "latest",
+    "classnames": "latest",
+    "negotiator": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "latest",
+    "swiper": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-next": "latest"
+  }
+}
