@@ -6,7 +6,7 @@ import { Header } from "_components/Header";
 // metadata
 export const metadata = {
   title: "weather.co",
-  description: "Weather forecast with current conditions, wind, air quality.",
+  description: "Weather forecast with current conditions, wind and air quality.",
 };
 
 export const generateStaticParams = async () => {
