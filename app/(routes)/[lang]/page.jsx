@@ -25,9 +25,10 @@ const Page = async ({ params: { lang }, searchParams }) => {
 
 export const getData = async (lat, lon, units = "metric", lang = "en") => {
   const response = await fetch(
-    `https://${process.env.VERCEL_URL}/api?lat=${lat}&lon=${lon}&units=${units}&lang=${lang}`,
+    `https://weather-co.vercel.app/api?lat=${lat}&lon=${lon}&units=${units}&lang=${lang}`,
     { next: { revalidate: 300 } },
   );
+	console.log(response.json);
   return response.json();
 };
 

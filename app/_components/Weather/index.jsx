@@ -7,7 +7,7 @@ import styles from "./styles.module.scss"
 import { useParams } from "next/navigation"
 
 export const Weather = ({
-	city: { name, local_names, lat, lon, country },
+	city: { local_names, country },
 	data: {
 		dt = 0,
 		temp = 0,
