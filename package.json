@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "prettify": "prettier --write .",
-    "dev": "next dev -p 8000",
-    "clean": "rm -r .next && yarn run prettify",
+    "dev": "next dev",
+    "clean": "rm -r .next && pnpm run prettify",
     "build": "next build",
-    "start": "next start -p 8000",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -18,7 +18,8 @@
     "react": "latest",
     "react-dom": "latest",
     "sass": "latest",
-    "swiper": "latest"
+    "swiper": "latest",
+    "valtio": "^1.13.2"
   },
   "devDependencies": {
     "eslint": "latest",

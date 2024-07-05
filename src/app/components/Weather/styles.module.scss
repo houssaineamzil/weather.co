@@ -1,0 +1,62 @@
+// Variables
+@import "../../styles/_variables";
+
+.weather {
+  width: 100%;
+  background: radial-gradient(
+    300px circle at 80% 50%,
+    rgba(8 32 82 / 75%),
+    rgba(0 0 0 / 0%)
+  );
+
+  .weatherdetails {
+    gap: 0.25rem;
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .city {
+      font-weight: 500;
+      line-height: 110%;
+    }
+
+    .datetime {
+      line-height: 110%;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .temperature {
+      font-size: 3.5rem;
+      line-height: 100%;
+      font-family: $font_inter;
+    }
+  }
+
+  .weatherIcon {
+    flex: 1;
+    gap: 0.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    svg {
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+
+    .description {
+      line-height: 110%;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    width: 30%;
+  }
+}
